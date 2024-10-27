@@ -30,7 +30,9 @@ export default async function MainPage() {
         </Link>
       </header>
       <div className="mt-8 flex flex-wrap gap-4">
-        <TaskCard />
+        {allTasks.map((task) => (
+          <TaskCard key={task._id} taskCard={task} />
+        ))}
       </div>
     </div>
   );
