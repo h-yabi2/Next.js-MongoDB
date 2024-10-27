@@ -19,6 +19,7 @@ export const GET = async (
     }
     return NextResponse.json({
       status: 200,
+      message: "タスクを取得しました",
       task,
     });
   } catch (error) {

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { TaskDocument } from "@/models/task";
+import { updateTask } from "@/actions/task";
 
 interface EditTaskFormProps {
   task: TaskDocument;
