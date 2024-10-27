@@ -2,6 +2,7 @@ import TaskDeleteButton from "./TaskDeleteButton/TaskDeleteButton";
 import TaskEditButton from "./TaskEditButton/TaskEditButton";
 
 interface TaskDocument {
+  _id: string;
   title: string;
   description: string;
   dueDate: string;
@@ -30,8 +31,8 @@ const TaskCard: React.FC<{ taskCard: TaskDocument }> = ({ taskCard }) => {
             {taskCard.isCompleted ? "Completed" : "Incomplete"}
           </div>
           <div className="flex gap-4">
-            <TaskEditButton id="1" />
-            <TaskDeleteButton id="1" />
+            <TaskEditButton id={taskCard._id} />
+            <TaskDeleteButton id={taskCard._id} />
           </div>
         </div>
       </div>
